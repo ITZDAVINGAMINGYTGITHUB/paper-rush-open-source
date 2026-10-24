@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+.vercel/
+*.log
+*.bak
+*.zip
+*.sql.dump
+*.sqlite
+*.db
