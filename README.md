@@ -1,32 +1,55 @@
-# Paper Rush Open Source
+# Paper Rush
 
-Community-facing open-source workspace for **Paper Rush**, a paper-craft rhythm platformer.
+**Paper Rush v1.6** is a paper-craft rhythm platformer built with React, Vite, TypeScript, Tailwind, and Supabase-backed community features.
 
-## Status
+This repository is the public open-source home for the project.
 
-This repository is a **public starter**, not yet a complete source release. The production game remains in a separate private repository while code, dependencies, assets, and security-sensitive integrations are reviewed for publication.
+## What Paper Rush includes
 
-## Intended scope
+- Multiple movement/gameplay modes
+- A level editor and community level browser
+- Online publishing and ratings
+- Leaderboards and a ranked demon list
+- Local-only fallback when backend configuration is unavailable
+- Browser-first deployment with Vite
 
-- Reusable gameplay and level-editor components once audited
-- Local-only development and test utilities
-- Documentation for contributors
-- Example configuration with no production credentials
+## Open-source status
 
-## Security and contribution policy
+Paper Rush is being published from its existing v1.6 production codebase. The game itself is not being rebuilt for this repository.
 
-Never commit `.env` files, API secrets, session tokens, user records, database exports, production deployment configuration, or third-party assets without redistribution rights.
+Source code released here is licensed under the **MIT License** unless a file says otherwise.
 
-A public Supabase publishable key is not a secret by itself, but production endpoints and authentication flows still require review.
+The Paper Rush name, branding, and any third-party or separately licensed media/assets are **not automatically covered by the MIT license**. Do not redistribute assets unless their license or source explicitly allows it.
 
-## Getting started
+## Current public source
 
-Source code has **not been imported yet**. This repository currently contains documentation only.
+The repository currently includes the first audited reusable game module plus project documentation. Additional v1.6 source can be synchronized from the production repository after secret, privacy, and third-party-asset checks.
+
+## Development setup
+
+The production project uses Node.js with Vite.
+
+Typical development commands:
+
+```bash
+npm ci
+npm run dev
+npm test
+npm run build
+```
+
+For backend-enabled development, copy `.env.example` to `.env` and provide your own Supabase project values. Never commit `.env`.
+
+Without backend variables, Paper Rush is designed to fall back to local-only storage for supported features.
+
+## Security
+
+Do not commit API secrets, session tokens, user records, database exports, private production configuration, or credentials. See [SECURITY.md](SECURITY.md).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-No license has been granted yet. Please do not assume the source or assets are available for reuse until a license is selected and added.
-
-## Maintainer
-
-Maintained by the Paper Rush project owner.
+Source code in this repository is available under the [MIT License](LICENSE), except where otherwise stated.
